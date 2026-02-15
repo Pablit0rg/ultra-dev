@@ -1,21 +1,23 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --background: #000000;
-  --foreground: #ededed;
+@layer base {
+  body {
+    background-image: 
+      radial-gradient(circle at 2px 2px, #111 1px, transparent 0);
+    background-size: 48px 48px;
+    background-attachment: fixed;
+  }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: 'Inter', sans-serif; /* Certifique-se de ter uma fonte sans-serif limpa */
-  -webkit-font-smoothing: antialiased;
+/* Scrollbar de Luxo */
+::-webkit-scrollbar {
+  width: 5px;
 }
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+::-webkit-scrollbar-track {
+  background: #000;
+}
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
 }

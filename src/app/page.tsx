@@ -1,20 +1,23 @@
 import { Hero } from "@/components/sections/Hero";
 import { Projects } from "@/components/sections/Projects";
 import { Skills } from "@/components/sections/Skills";
-import { Footer } from "@/components/sections/Footer"; // Importação
+import { Footer } from "@/components/sections/Footer";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-black flex flex-col items-center">
-      <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_50%,#0a0a0a_0%,transparent_70%)] pointer-events-none" />
+    <main className="relative min-h-screen bg-black selection:bg-white selection:text-black">
+      {/* Luz focal no topo para profundidade */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full md:w-[1000px] h-[600px] bg-blue-500/5 blur-[120px] rounded-full pointer-events-none" />
       
-      <div className="flex flex-col items-center justify-center min-h-screen w-full">
-        <Hero />
+      <div className="relative z-10 flex flex-col gap-32 pb-32">
+        <div className="h-screen flex items-center justify-center">
+          <Hero />
+        </div>
+        
+        <Projects />
+        <Skills />
+        <Footer />
       </div>
-
-      <Projects />
-      <Skills />
-      <Footer /> {/* Fechamento da página */}
     </main>
   );
 }

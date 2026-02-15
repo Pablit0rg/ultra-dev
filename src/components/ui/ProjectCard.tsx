@@ -1,22 +1,26 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
-interface ProjectProps {
-  title: string;
-  description: string;
-  tag: string;
-}
+export function ProjectCard({ title, description, tag }: any) {
+  // Efeito de inclinação 3D sutil
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  const mouseXSpring = useSpring(x);
+  const mouseYSpring = useSpring(y);
+  const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["7deg", "-7deg"]);
+  const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-7deg", "7deg"]);
 
-export function ProjectCard({ title, description, tag }: ProjectProps) {
   return (
     <motion.div 
-      whileHover={{ y: -5 }}
-      className="group relative p-6 rounded-2xl border border-zinc-800 bg-zinc-900/50 backdrop-blur-xl transition-all hover:border-zinc-700"
+      style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
+      className="group relative p-8 rounded-3xl border border-zinc-800 bg-black/40 backdrop-blur-md transition-colors hover:border-zinc-400/50"
     >
-      <div className="absolute -inset-0.5 bg-gradient-to-r from-zinc-500 to-zinc-800 rounded-2xl opacity-0 group-hover:opacity-10 transition duration-500" />
-      <span className="text-[10px] uppercase tracking-widest text-zinc-500 mb-2 block">{tag}</span>
-      <h3 className="text-xl font-medium text-white mb-2">{title}</h3>
-      <p className="text-zinc-400 text-sm leading-relaxed">{description}</p>
+      <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-3xl pointer-events-none" />
+      <div className="relative z-10">
+        <span className="text-[10px] font-bold tracking-[0.3em] text-zinc-600 group-hover:text-zinc-400 transition-colors uppercase">{tag}</span>
+        <h3 className="text-2xl font-semibold text-white mt-4 mb-3 tracking-tight">{title}</h3>
+        <p className="text-zinc-500 text-sm leading-relaxed font-light">{description}</p>
+      </div>
     </motion.div>
   );
 }
