@@ -1,12 +1,17 @@
 import { Hero } from "@/components/sections/Hero";
+import { Projects } from "@/components/sections/Projects";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black">
+    <main className="relative min-h-screen bg-black flex flex-col items-center">
       {/* Background Glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,#1a1a1a_0%,transparent_50%)]" />
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_50%,#0a0a0a_0%,transparent_70%)] pointer-events-none" />
       
-      <Hero />
+      <div className="flex flex-col items-center justify-center min-h-screen w-full">
+        <Hero />
+      </div>
+
+      <Projects />
     </main>
   );
 }
