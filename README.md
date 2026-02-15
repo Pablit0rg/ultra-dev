@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🌌 Ultra-Dev: O Manifesto do Portfólio de Luxo
+Este projeto documenta a jornada de Pablo Rosa, um Engenheiro de Software Full-Stack focado na estética "Luxury Dark Tech". O objetivo é transformar um boilerplate técnico em uma experiência digital imersiva de alto nível.
 
-## Getting Started
+📍 A Jornada Até Aqui (Log de Batalha)
+Fundação Sólida: Limpeza do boilerplate do Next.js 15 e configuração da paleta #000000 (Preto de Luxo).
+Arquitetura de Elite: Organização de pastas seguindo padrões internacionais (Atomic Design) em src/components/sections e src/components/ui.
+Interatividade de Luxo: Implementação do Cursor.tsx customizado com efeito mix-blend-difference e animações fluidas via Framer Motion.
+Vitrine de Autoridade: Criação do ProjectCard.tsx com efeitos 3D e a seção de Projetos listando cases reais como PrevDesk, Afrotunde e DaRafa.
+Deploy Estratégico: Lançamento oficial na Vercel para acessibilidade global em ultra-dev.vercel.app.
+🗺️ Mapa Completo: O Destino Final
+Para que o projeto saia da "carcaça" e atinja o estado de perfeição, seguiremos este roteiro detalhado:
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Fase 1: Refinamento Estético (A "Armadura")
+Grid Técnico: Implementação de um background grid sutil (48px) para profundidade visual.
+Luz Focal (Spotlight): Adição de gradientes radiais suaves que seguem o cursor ou iluminam o topo da página.
+Tipografia de Big Tech: Ajuste fino de tracking-tighter e fontes inter-variáveis para um visual limpo e caro.
+Fase 2: Funcionalidade e Conversão (O "Coração")
+Navbar Adaptativa: Barra flutuante com efeito Glassmorphism para navegação entre Início, Projetos e Contato.
+Seção de Contato Viva: Formulário funcional integrado com Resend e links diretos para WhatsApp e E-mail.
+Estatísticas de Autoridade: Exibição clara de métricas (2+ anos de experiência, 10+ projetos entregues).
+Fase 3: Dinamismo e Escala (O "Cérebro")
+CMS com Firebase: Transformar a seção de projetos em um feed dinâmico vindo do Firestore.
+Automação n8n: Fluxo automatizado para capturar leads do formulário e enviar notificações instantâneas.
+SEO & Meta-Tags: Configuração de imagens de preview (Open Graph) para compartilhamento premium no LinkedIn/WhatsApp.
+🛠️ Stack Tecnológica de Elite
+Framework: Next.js 15 (App Router / Turbopack).
+Linguagem: TypeScript (Strict Mode).
+Estilização: Tailwind CSS v4.
+Animação: Framer Motion.
+Deploy: Vercel.
+Status do Projeto: ▓▓▓▓▓▓░░░░ 60% (Fase de Refinamento Visual)
+Próxima Ação: Implementar o efeito de borda iluminada nos cartões de projeto e a Navbar flutuante.
